@@ -4,4 +4,5 @@ RUN echo "test" > /coolfile
 RUN echo "exist" > /awesomefile
 RUN rm -f /coolfile
 
-CMD ["sleep", "infinity"]
+# ls -la awesomefile coolfile unrelatedfile
+CMD ["ls", "-la", "coolfile", "awesomefile", "unrelatedfile"]
